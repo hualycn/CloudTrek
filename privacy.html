@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StepJoy 隐私政策</title>
+<meta name="description" content="StepJoy 隐私政策：说明我们如何收集、使用、存储和保护你的信息。StepJoy 为单机应用，健康数据仅在本机处理，绝不上传。">
+<!-- 上线前请替换页面中的占位信息：开发者名称、联系邮箱、地址（见文末「联系我们」） -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23ff8a5b'/><path d='M14 44c6-4 10-2 15-5s11-5 16-11' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-dasharray='1 10'/><circle cx='14' cy='44' r='4.5' fill='%23fff'/><circle cx='30' cy='38' r='4.5' fill='%23fff'/><circle cx='46' cy='28' r='4.5' fill='%23fff'/></svg>">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#f8f7f4;
+  --panel:#ffffff;
+  --ink:#3a4a5a;
+  --ink-soft:#8b98a5;
+  --accent:#ff8a5b;
+  --accent-deep:#ef6f3d;
+  --accent-soft:#fff0e8;
+  --track:#ece9e3;
+  --line:#e9e4db;
+  --radius:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased}
+body.zh [data-lang="en"]{display:none!important}
+body.en [data-lang="zh"]{display:none!important}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px 64px}
+
+/* ===== 顶栏 ===== */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(248,247,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:800px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:18px;letter-spacing:.02em;color:var(--ink)}
+.brand-badge{width:34px;height:34px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.brand-badge svg{width:20px;height:20px}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 16px;font-size:13px;font-family:inherit;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-deep)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff}
+
+/* ===== 头部 ===== */
+.hero{padding:46px 0 6px}
+h1{font-family:'Noto Serif SC','Songti SC',serif;font-size:clamp(30px,5vw,44px);font-weight:900;letter-spacing:.01em;line-height:1.3;color:var(--ink)}
+.hero-sub{margin-top:10px;color:var(--ink-soft);font-size:15px}
+.meta-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:12.5px;color:var(--ink-soft)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* ===== 数据概览 ===== */
+.summary{margin-top:30px;background:var(--accent-soft);border-radius:var(--radius);padding:24px 26px}
+.summary-title{font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.summary-title svg{width:18px;height:18px;flex:none}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+col.k{width:33%}
+col.v{width:67%}
+th,td{text-align:left;padding:9px 4px;font-size:13.5px;vertical-align:top;border-top:1px solid rgba(233,228,219,.9)}
+th{font-weight:700;color:var(--ink)}
+td{color:#44566a}
+tr:first-child th,tr:first-child td{border-top:none}
+
+/* ===== 目录 ===== */
+.toc{margin-top:24px;background:var(--panel);border-radius:var(--radius);padding:24px 26px}
+.toc-title{font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:17px;margin-bottom:12px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 22px}
+.toc-grid a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:var(--ink);font-size:14px;padding:6px 0;border-radius:8px;transition:color .15s}
+.toc-grid a .n{color:var(--accent-deep);font-weight:700;font-family:'Noto Serif SC','Songti SC',serif;flex:none;min-width:22px}
+.toc-grid a:hover{color:var(--accent-deep)}
+
+/* ===== 正文区块 ===== */
+main{padding-top:26px}
+.policy-section{background:var(--panel);border-radius:var(--radius);padding:26px 28px;margin-bottom:16px;scroll-margin-top:86px}
+.sec-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:10px}
+.sec-no{flex:none;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent-deep);font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:3px}
+h2{font-family:'Noto Serif SC','Songti SC',serif;font-size:20px;font-weight:700;line-height:1.45;padding-top:2px;color:var(--ink)}
+.sec-body{font-size:14.5px;color:#44566a}
+.sec-body p{margin-bottom:11px}
+.sec-body p:last-child{margin-bottom:0}
+.sec-body ul{margin:8px 0 12px 22px}
+.sec-body li{margin-bottom:6px}
+.sec-body strong{color:var(--ink);font-weight:700}
+.sec-note{font-size:12.5px;color:var(--ink-soft);margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+
+/* ===== 页脚 ===== */
+footer{margin-top:38px;text-align:center;color:var(--ink-soft);font-size:12.5px;line-height:2.1}
+footer .foot-line{display:block}
+
+/* ===== 打印 ===== */
+@media print{
+  body{background:#fff;line-height:1.7}
+  .topbar,.toc,.summary{display:none!important}
+  .wrap{padding:0;max-width:none}
+  .hero{padding-top:8px}
+  .policy-section{box-shadow:none;border:1px solid #eee;page-break-inside:avoid;padding:18px 20px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 14px 48px}
+  .topbar-inner{padding:10px 14px}
+  .brand{font-size:16px}
+  .toc-grid{grid-template-columns:1fr}
+  .policy-section{padding:22px 20px}
+  .summary,.toc{padding:20px}
+  .sec-head{gap:11px}
+  h2{font-size:18px}
+}
+</style>
+</head>
+<body class="zh">
+
+<!-- ===== 顶栏 ===== -->
+<div class="topbar no-print">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-badge">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 44c6-4 10-2 15-5s11-5 16-11" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11"/><circle cx="14" cy="44" r="5" fill="#fff"/><circle cx="30" cy="38" r="5" fill="#fff"/><circle cx="47" cy="27" r="5" fill="#fff"/></svg>
+      </span>
+      <span>StepJoy</span>
+    </div>
+    <div class="top-actions">
+      <button class="btn" id="langToggle" type="button">EN</button>
+      <button class="btn btn-primary" id="printBtn" type="button"><span data-lang="zh">打印 / 导出 PDF</span><span data-lang="en">Print / PDF</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== 头部 ===== -->
+  <header class="hero">
+    <h1 data-lang="zh">隐私政策</h1>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <p class="hero-sub" data-lang="zh">欢迎使用 StepJoy。我们相信数据属于你自己，并始终以透明、克制的方式处理你的信息。</p>
+    <p class="hero-sub" data-lang="en">Welcome to StepJoy. We believe your data belongs to you, and we handle your information transparently and minimally.</p>
+    <div class="meta-chips">
+      <span class="chip"><b data-lang="zh">最后更新</b><b data-lang="en">Last updated</b>：2026-09-16</span>
+      <span class="chip"><b data-lang="zh">生效日期</b><b data-lang="en">Effective date</b>：2026-09-16</span>
+      <span class="chip">V1.0</span>
+    </div>
+  </header>
+
+  <!-- ===== 数据概览 ===== -->
+  <section class="summary no-print" aria-label="数据概览">
+    <div class="summary-title">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#ef6f3d" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5" stroke="#ef6f3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-lang="zh">数据采集一览</span><span data-lang="en">At a Glance</span>
+    </div>
+    <div data-lang="zh">
+      <table>
+        <colgroup><col class="k"><col class="v"></colgroup>
+        <tr><th>收集的数据</th><td>健康与健身数据：步数、步行 / 跑步距离（仅读取，不写入）</td></tr>
+        <tr><th>数据是否上传</th><td>否，全部在本机处理，不传输至任何服务器</td></tr>
+        <tr><th>是否追踪用户</th><td>否，无广告标识（IDFA），无广告、统计或追踪 SDK</td></tr>
+        <tr><th>是否与第三方共享</th><td>否，不出售、不出租、不共享</td></tr>
+        <tr><th>账号 / 注册</th><td>无需注册，无账号体系</td></tr>
+      </table>
+    </div>
+    <div data-lang="en">
+      <table>
+        <colgroup><col class="k"><col class="v"></colgroup>
+        <tr><th>Data collected</th><td>Health &amp; Fitness: step count and walking + running distance (read-only)</td></tr>
+        <tr><th>Data uploaded</th><td>No — everything is processed on-device and never transmitted to any server</td></tr>
+        <tr><th>Tracking</th><td>No — no advertising identifier (IDFA), no ads, analytics, or tracking SDKs</td></tr>
+        <tr><th>Shared with third parties</th><td>No — never sold, rented, or shared</td></tr>
+        <tr><th>Account / registration</th><td>None — no account system or sign-up required</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== 目录 ===== -->
+  <nav class="toc no-print" aria-label="目录">
+    <div class="toc-title" data-lang="zh">目录</div>
+    <div class="toc-title" data-lang="en">Contents</div>
+    <div class="toc-grid">
+      <a href="#sec-1"><span class="n">01</span><span data-lang="zh">我们收集的信息</span><span data-lang="en">Information We Collect</span></a>
+      <a href="#sec-2"><span class="n">02</span><span data-lang="zh">我们如何使用信息</span><span data-lang="en">How We Use Information</span></a>
+      <a href="#sec-3"><span class="n">03</span><span data-lang="zh">信息的存储与保护</span><span data-lang="en">Storage and Security</span></a>
+      <a href="#sec-4"><span class="n">04</span><span data-lang="zh">信息共享与披露</span><span data-lang="en">Sharing and Disclosure</span></a>
+      <a href="#sec-5"><span class="n">05</span><span data-lang="zh">你的权利与选择</span><span data-lang="en">Your Rights and Choices</span></a>
+      <a href="#sec-6"><span class="n">06</span><span data-lang="zh">儿童隐私</span><span data-lang="en">Children's Privacy</span></a>
+      <a href="#sec-7"><span class="n">07</span><span data-lang="zh">政策更新</span><span data-lang="en">Changes to This Policy</span></a>
+      <a href="#sec-8"><span class="n">08</span><span data-lang="zh">联系我们</span><span data-lang="en">Contact Us</span></a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== 引言 ===== -->
+    <section class="policy-section" id="sec-0">
+      <div class="sec-head">
+        <span class="sec-no">•</span>
+        <h2 data-lang="zh">引言</h2><h2 data-lang="en">Introduction</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p>本隐私政策（下称「本政策」）说明 StepJoy（下称「本应用」或「我们」）如何收集、使用、存储和保护你的信息。请在使用本应用前完整阅读本政策。</p>
+        <p>StepJoy 是一款运动数据可视化应用：在获得你的授权后，读取 Apple 健康（HealthKit）中的<b>步数</b>与<b>步行 / 跑步距离</b>，将累计运动数据映射到内置线路上，把每天的走路变成一场「云旅行」。</p>
+        <p>本应用是<b>单机应用</b>：无账号体系、无后端服务器、无任何网络上报。我们同时遵守适用的数据保护法律（包括《中华人民共和国个人信息保护法》）以及 Apple 关于健康数据使用的相关要求。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p>This Privacy Policy (the "Policy") explains how StepJoy (the "App", "we", or "us") collects, uses, stores, and protects your information. Please read this Policy in full before using the App.</p>
+        <p>StepJoy is an activity data visualization app. With your authorization, it reads <b>step count</b> and <b>walking + running distance</b> from Apple Health (HealthKit) and maps your accumulated activity onto built-in routes, turning each day of walking into a "virtual journey".</p>
+        <p>The App runs entirely <b>on-device</b>: no account system, no backend server, and no network transmission. We also comply with applicable data protection laws (including the Personal Information Protection Law of the People's Republic of China) and Apple's requirements regarding health data.</p>
+      </div>
+    </section>
+
+    <!-- ===== 01 我们收集的信息 ===== -->
+    <section class="policy-section" id="sec-1">
+      <div class="sec-head">
+        <span class="sec-no">01</span>
+        <h2 data-lang="zh">我们收集的信息</h2><h2 data-lang="en">Information We Collect</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p><strong>健康数据（经你授权读取）。</strong>本应用仅申请对以下两类健康数据的<b>读取</b>权限，不写入、不修改、不删除你的任何健康数据：</p>
+        <ul>
+          <li>步数（Step Count）；</li>
+          <li>步行 / 跑步距离（Walking + Running Distance）。</li>
+        </ul>
+        <p>上述数据直接由 Apple 健康（HealthKit）提供，本应用不会在设备之外另行保存原始健康样本。</p>
+        <p><strong>本地使用数据。</strong>你在各条线路上累计的步数、距离与进度。这些数据仅保存在你的设备本地，用于计算和展示线路进度。</p>
+        <p><strong>我们不收集的信息。</strong>本应用不要求注册，不收集你的姓名、手机号、电子邮箱、通讯录、照片、精确定位、广告标识符（IDFA）等个人信息；不采集设备标识或任何可用于识别你的信息；不嵌入第三方统计、广告或追踪 SDK。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p><strong>Health data (read with your authorization).</strong> The App only requests <b>read</b> access to the following two types of health data. It never writes to, modifies, or deletes any of your health data:</p>
+        <ul>
+          <li>Step count;</li>
+          <li>Walking + running distance.</li>
+        </ul>
+        <p>This data comes directly from Apple Health (HealthKit). The App does not store raw health samples outside your device.</p>
+        <p><strong>Usage data generated locally.</strong> Your accumulated steps, distance, and progress on each route. This data is stored only on your device and is used solely to calculate and display route progress.</p>
+        <p><strong>What we do not collect.</strong> The App requires no registration and does not collect your name, phone number, email address, contacts, photos, precise location, or advertising identifiers (IDFA). It does not collect device identifiers or any identifying information, and it does not integrate third-party analytics, advertising, or tracking SDKs.</p>
+      </div>
+    </section>
+
+    <!-- ===== 02 我们如何使用信息 ===== -->
+    <section class="policy-section" id="sec-2">
+      <div class="sec-head">
+        <span class="sec-no">02</span>
+        <h2 data-lang="zh">我们如何使用信息</h2><h2 data-lang="en">How We Use Information</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p>我们仅将上述信息用于以下目的：</p>
+        <ul>
+          <li>以你首次使用本应用的时间为起点，读取并累计此后的步数与距离，计算你在线路上的位置、节点进度与整体进度；</li>
+          <li>在应用内展示当天及累计的步数与距离；</li>
+          <li>优化线路进度计算与本地体验。</li>
+        </ul>
+        <p>全部计算均在你的设备本地完成，健康数据不会离开你的设备。我们不会将你的信息用于任何其他目的，包括广告投放、用户画像或第三方营销。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p>We use the information described above only for the following purposes:</p>
+        <ul>
+          <li>Using the time you first launched the App as the starting point, reading and accumulating steps and distance since then to calculate your position, node progress, and overall progress along routes;</li>
+          <li>Displaying your current-day and cumulative steps and distance within the App;</li>
+          <li>Improving route progress calculation and the local experience.</li>
+        </ul>
+        <p>All calculations are performed locally on your device, and health data never leaves your device. We do not use your information for any other purpose, including advertising, profiling, or third-party marketing.</p>
+      </div>
+    </section>
+    <!-- ===== 03 信息的存储与保护 ===== -->
+    <section class="policy-section" id="sec-3">
+      <div class="sec-head">
+        <span class="sec-no">03</span>
+        <h2 data-lang="zh">信息的存储与保护</h2><h2 data-lang="en">Storage and Security</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p><strong>健康数据。</strong>由 Apple 健康（HealthKit）在你设备上保管。本应用仅按你的授权读取，不将原始健康样本复制到本应用的存储中；本地仅保存由步数 / 距离换算得到的线路进度数值。</p>
+        <p><strong>应用数据。</strong>线路、节点、进度与应用状态使用 Apple SwiftData 持久化存储于本应用在 iOS 中的本地沙盒，受 iOS 系统安全机制保护。</p>
+        <p><strong>传输安全。</strong>本应用不向任何服务器传输数据，因此不存在数据在传输过程中被第三方接触的场景。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p><strong>Health data.</strong> Stored by Apple Health (HealthKit) on your device. The App reads it only under your authorization and does not copy raw health samples into its own storage; locally, it keeps only route progress figures derived from steps and distance.</p>
+        <p><strong>App data.</strong> Routes, nodes, progress, and app state are persisted locally using Apple SwiftData in the App's iOS sandbox, protected by iOS system security.</p>
+        <p><strong>Transmission security.</strong> The App does not transmit any data to servers, so no third party can access your data during transmission.</p>
+      </div>
+    </section>
+
+    <!-- ===== 04 信息共享与披露 ===== -->
+    <section class="policy-section" id="sec-4">
+      <div class="sec-head">
+        <span class="sec-no">04</span>
+        <h2 data-lang="zh">信息共享与披露</h2><h2 data-lang="en">Sharing and Disclosure</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <ul>
+          <li>我们不会出售、出租或以任何形式向第三方提供你的个人信息；</li>
+          <li>我们不会将健康数据用于广告、营销或推广；</li>
+          <li>我们不会与广告平台、数据经纪商或信息转售商共享任何数据；</li>
+          <li>除法律法规要求或有权机关依法调取外，本应用不存在向任何第三方披露数据的场景。</li>
+        </ul>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <ul>
+          <li>We do not sell, rent, or provide your personal information to any third party in any form;</li>
+          <li>We do not use health data for advertising, marketing, or promotion;</li>
+          <li>We do not share any data with advertising platforms, data brokers, or information resellers;</li>
+          <li>Except as required by law or lawfully requested by competent authorities, the App has no scenario in which data is disclosed to any third party.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 05 你的权利与选择 ===== -->
+    <section class="policy-section" id="sec-5">
+      <div class="sec-head">
+        <span class="sec-no">05</span>
+        <h2 data-lang="zh">你的权利与选择</h2><h2 data-lang="en">Your Rights and Choices</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p><strong>撤销健康数据授权。</strong>你可以在 iOS「设置 &gt; 隐私与安全性 &gt; 健康」中随时查看并撤销本应用对健康数据的访问权限。撤销后，本应用将无法读取新的健康数据。</p>
+        <p><strong>删除本地数据。</strong>卸载本应用，或在「设置 &gt; 通用 &gt; iPhone 储存空间」中删除本应用及其数据，即可清除全部本地进度数据。</p>
+        <p><strong>查询与更正。</strong>应用内展示的数据均来源于你设备上的 Apple 健康数据与本地进度，你可以直接在 Apple 健康中查看和管理原始健康数据。</p>
+        <p><strong>联系我们。</strong>如你对个人信息处理有任何疑问或请求，可通过文末联系方式与我们联系，我们将在合理期限内处理。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p><strong>Revoke health data access.</strong> You can review and revoke the App's access to health data at any time under iOS Settings &gt; Privacy &amp; Security &gt; Health. After revocation, the App can no longer read new health data.</p>
+        <p><strong>Delete local data.</strong> Uninstall the App, or delete the App and its data under Settings &gt; General &gt; iPhone Storage, to erase all local progress data.</p>
+        <p><strong>Review and correct.</strong> Data displayed in the App comes from Apple Health data and local progress on your device; you can view and manage the underlying health data directly in Apple Health.</p>
+        <p><strong>Contact us.</strong> If you have any questions or requests regarding the processing of your information, contact us via the details at the end of this Policy and we will respond within a reasonable period.</p>
+      </div>
+    </section>
+    <!-- ===== 06 儿童隐私 ===== -->
+    <section class="policy-section" id="sec-6">
+      <div class="sec-head">
+        <span class="sec-no">06</span>
+        <h2 data-lang="zh">儿童隐私</h2><h2 data-lang="en">Children's Privacy</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p>本应用面向一般公众，不面向儿童提供服务，也不会在明知情况下收集儿童的个人信息。如果家长或监护人认为儿童向本应用提供了个人信息，请通过文末联系方式与我们联系，我们将在核实后删除相关信息。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p>The App is intended for the general public and is not directed at children. We do not knowingly collect personal information from children. If a parent or guardian believes that a child has provided personal information through the App, please contact us via the details at the end of this Policy, and we will delete such information after verification.</p>
+      </div>
+    </section>
+
+    <!-- ===== 07 政策更新 ===== -->
+    <section class="policy-section" id="sec-7">
+      <div class="sec-head">
+        <span class="sec-no">07</span>
+        <h2 data-lang="zh">政策更新</h2><h2 data-lang="en">Changes to This Policy</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p>我们可能不时更新本政策。更新后的政策将在本页面发布，并同步更新页面顶部的「最后更新」日期。发生重大变更时，我们将通过应用内提示等方式通知你。在你继续使用本应用时，即视为你接受更新后的政策。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p>We may update this Policy from time to time. The updated Policy will be posted on this page with an updated "Last Updated" date at the top. In the event of material changes, we will notify you through in-app notices or other appropriate means. Your continued use of the App constitutes acceptance of the updated Policy.</p>
+      </div>
+    </section>
+
+    <!-- ===== 08 联系我们 ===== -->
+    <section class="policy-section" id="sec-8">
+      <div class="sec-head">
+        <span class="sec-no">08</span>
+        <h2 data-lang="zh">联系我们</h2><h2 data-lang="en">Contact Us</h2>
+      </div>
+      <div class="sec-body" data-lang="zh">
+        <p>如你对本隐私政策或个人信息处理有任何疑问、意见或请求，请通过以下方式联系我们：</p>
+        <ul>
+          <li>电子邮箱：hualy@foxmail.com</li>
+        </ul>
+        <p class="sec-note">提示：上线前请将上述占位信息替换为你的真实联系方式，并确保该邮箱可正常接收邮件。</p>
+      </div>
+      <div class="sec-body" data-lang="en">
+        <p>If you have any questions, comments, or requests regarding this Policy or the processing of your personal information, please contact us at:</p>
+        <ul>
+          <li>Email: hualy@foxmail.com</li>
+        </ul>
+        <p class="sec-note">Note: please replace the placeholder contact details above with your real ones before publishing, and make sure the mailbox can receive emails.</p>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<script>
+(function(){
+  var body = document.body;
+  var langBtn = document.getElementById('langToggle');
+  langBtn.addEventListener('click', function(){
+    var isEn = body.classList.toggle('en');
+    body.classList.toggle('zh', !isEn);
+    document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+    langBtn.textContent = isEn ? '中文' : 'EN';
+    document.title = isEn ? 'StepJoy Privacy Policy' : 'StepJoy 隐私政策';
+  });
+  document.getElementById('printBtn').addEventListener('click', function(){
+    window.print();
+  });
+})();
+</script>
+</body>
+</html>

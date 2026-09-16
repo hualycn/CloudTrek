@@ -1,5 +1,3 @@
-Wrote 22793 bytes to /Users/sunhualei/projects/StepJoy/support/index.html.
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -33,4 +31,381 @@ body.en [data-lang="zh"]{display:none!important}
 /* ===== 顶栏 ===== */
 .topbar{position:sticky;top:0;z-index:20;background:rgba(248,247,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .topbar-inner{max-width:800px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:10px;font-family:'Noto Serif SC','Songti SC',serif;font-weight:700[truncated]
+.brand{display:flex;align-items:center;gap:10px;font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:18px;letter-spacing:.02em;color:var(--ink)}
+.brand-badge{width:34px;height:34px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.brand-badge svg{width:20px;height:20px}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 16px;font-size:13px;font-family:inherit;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-deep)}
+
+/* ===== 头部 ===== */
+.hero{padding:46px 0 6px}
+h1{font-family:'Noto Serif SC','Songti SC',serif;font-size:clamp(30px,5vw,44px);font-weight:900;letter-spacing:.01em;line-height:1.3;color:var(--ink)}
+.hero-sub{margin-top:10px;color:var(--ink-soft);font-size:15px}
+.meta-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:12.5px;color:var(--ink-soft)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* ===== 区块通用 ===== */
+.section-block{background:var(--panel);border-radius:var(--radius);padding:26px 28px;margin-top:16px;scroll-margin-top:86px}
+.sec-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:6px}
+.sec-no{flex:none;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent-deep);font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.sec-no svg{width:16px;height:16px;stroke:var(--accent-deep)}
+h2{font-family:'Noto Serif SC','Songti SC',serif;font-size:20px;font-weight:700;line-height:1.45;padding-top:2px;color:var(--ink)}
+.sec-desc{font-size:13.5px;color:var(--ink-soft);margin-bottom:6px}
+
+/* ===== FAQ 手风琴 ===== */
+.faq-item{border-top:1px solid var(--line)}
+.faq-item:first-child{border-top:none}
+.faq-q{width:100%;display:flex;align-items:center;gap:12px;background:none;border:none;padding:16px 2px;text-align:left;font-family:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;transition:color .15s}
+.faq-q:hover{color:var(--accent-deep)}
+.faq-q .q-arrow{flex:none;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;transition:transform .22s,background .22s}
+.faq-q[aria-expanded="true"] .q-arrow{transform:rotate(45deg);background:var(--accent)}
+.faq-q .q-arrow svg{width:10px;height:10px;stroke:var(--accent-deep)}
+.faq-q[aria-expanded="true"] .q-arrow svg{stroke:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease}
+.faq-a-inner{padding:0 32px 18px 2px;font-size:14px;color:#44566a}
+.faq-a-inner p{margin-bottom:9px}
+.faq-a-inner p:last-child{margin-bottom:0}
+.faq-a-inner ul{margin:6px 0 10px 20px}
+.faq-a-inner li{margin-bottom:5px}
+.faq-a-inner strong{color:var(--ink);font-weight:700}
+
+/* ===== 排查步骤 ===== */
+.ts-item{display:flex;gap:16px;padding:15px 0;border-top:1px solid var(--line)}
+.ts-item:first-of-type{border-top:none}
+.ts-steps{flex:1;min-width:0}
+.ts-steps .ts-title{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:8px}
+.step-list{list-style:none;counter-reset:step}
+.step-list li{position:relative;padding-left:34px;margin-bottom:8px;font-size:14px;color:#44566a;counter-increment:step}
+.step-list li:last-child{margin-bottom:0}
+.step-list li::before{content:counter(step);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);font-family:'Noto Serif SC','Songti SC',serif;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
+
+/* ===== 联系 ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.contact-card{border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.contact-card .cc-title{font-weight:700;font-size:14px;color:var(--ink);display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.contact-card .cc-title svg{width:16px;height:16px;flex:none;stroke:var(--accent-deep)}
+.contact-card .cc-body{font-size:13.5px;color:#44566a}
+.contact-card .cc-body a{color:var(--accent-deep);text-decoration:none;font-weight:700;word-break:break-all}
+.contact-card .cc-body a:hover{text-decoration:underline}
+.contact-card ul{margin:4px 0 0 18px}
+.contact-card li{margin-bottom:4px;font-size:13.5px;color:#44566a}
+.sec-note{font-size:12.5px;color:var(--ink-soft);margin-top:16px;padding-top:10px;border-top:1px dashed var(--line)}
+
+/* ===== 页脚 ===== */
+footer{margin-top:38px;text-align:center;color:var(--ink-soft);font-size:12.5px;line-height:2.1}
+footer .foot-line{display:block}
+footer a{color:var(--ink-soft);text-decoration:none}
+footer a:hover{color:var(--accent-deep)}
+
+/* ===== 打印 ===== */
+@media print{
+  body{background:#fff;line-height:1.7}
+  .topbar,.faq-q{display:none!important}
+  .wrap{padding:0;max-width:none}
+  .hero{padding-top:8px}
+  .section-block{box-shadow:none;border:1px solid #eee;page-break-inside:avoid;padding:18px 20px}
+  .faq-a{max-height:none!important}
+  .faq-a-inner{padding:8px 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 14px 48px}
+  .topbar-inner{padding:10px 14px}
+  .brand{font-size:16px}
+  .section-block{padding:22px 20px}
+  .contact-grid{grid-template-columns:1fr}
+  h2{font-size:18px}
+}
+</style>
+</head>
+<body class="zh">
+
+<!-- ===== 顶栏 ===== -->
+<div class="topbar no-print">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-badge">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 44c6-4 10-2 15-5s11-5 16-11" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11"/><circle cx="14" cy="44" r="5" fill="#fff"/><circle cx="30" cy="38" r="5" fill="#fff"/><circle cx="47" cy="27" r="5" fill="#fff"/></svg>
+      </span>
+      <span>StepJoy</span>
+    </div>
+    <div class="top-actions">
+      <button class="btn" id="langToggle" type="button">EN</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== 头部 ===== -->
+  <header class="hero">
+    <h1 data-lang="zh">技术支持</h1>
+    <h1 data-lang="en">Support</h1>
+    <p class="hero-sub" data-lang="zh">遇到问题？先看看下面的常见问题与排查步骤；如果仍无法解决，欢迎随时联系我们。</p>
+    <p class="hero-sub" data-lang="en">Running into trouble? Check the FAQ and troubleshooting steps below; if you still need help, feel free to contact us.</p>
+    <div class="meta-chips">
+      <span class="chip"><b data-lang="zh">适用版本</b><b data-lang="en">App version</b>：V1.0</span>
+      <span class="chip"><b data-lang="zh">支持系统</b><b data-lang="en">Requires</b>：iOS 17+</span>
+      <span class="chip"><b data-lang="zh">数据说明</b><b data-lang="en">Data</b><span data-lang="zh">：仅本地，绝不上传</span><span data-lang="en">: on-device only, never uploaded</span></span>
+    </div>
+  </header>
+
+  <!-- ===== 常见问题 ===== -->
+  <section class="section-block" id="faq">
+    <div class="sec-head">
+      <span class="sec-no">?</span>
+      <div>
+        <h2 data-lang="zh">常见问题</h2><h2 data-lang="en">Frequently Asked Questions</h2>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">如何授权 StepJoy 读取健康数据？</span><span data-lang="en">How do I authorize StepJoy to read my health data?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>首次打开 App 时会弹出健康权限请求，点击「允许」即可读取<b>步数</b>与<b>步行 / 跑步距离</b>。</p>
+        <p>如果之前选择了拒绝，可以这样重新开启：打开 iOS「设置 &gt; 隐私与安全性 &gt; 健康 &gt; StepJoy」，打开「步数」与「步行 + 跑步距离」的读取权限，再回到 App 即可。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>On first launch, StepJoy asks for permission to read <b>step count</b> and <b>walking + running distance</b>. Tap Allow to proceed.</p>
+        <p>If you previously denied access, re-enable it in iOS Settings &gt; Privacy &amp; Security &gt; Health &gt; StepJoy — turn on Step Count and Walking + Running Distance — then return to the App.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">为什么步数和距离没有更新？</span><span data-lang="en">Why aren't my steps and distance updating?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <ul>
+          <li>检查健康授权是否已开启（见上一条）；</li>
+          <li>打开系统「健康」App，确认里面有步数记录；</li>
+          <li>StepJoy 以<b>安装 App 之后</b>为起点累计数据，安装前的历史数据不会计入；</li>
+          <li>完全退出 App 后重新打开，触发一次重新读取。</li>
+        </ul>
+      </div><div class="faq-a-inner" data-lang="en">
+        <ul>
+          <li>Check that health access is enabled (see previous question);</li>
+          <li>Open the Health app and confirm it contains step records;</li>
+          <li>StepJoy accumulates data starting from <b>when the App was installed</b>; older history is not counted;</li>
+          <li>Quit the App completely and reopen it to trigger a refresh.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">线路进度是怎么计算的？</span><span data-lang="en">How is my route progress calculated?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>StepJoy 把你自安装以来的累计步行 / 跑步距离映射到当前选中的线路上，显示你<b>所处的路段</b>、<b>距下一节点的剩余距离</b>以及<b>整条线路的完成百分比</b>。</p>
+        <p>无需开启定位，也无需一直打开 App——数据由系统健康记录自动统计，打开 App 时即可看到最新进度。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>StepJoy maps your accumulated walking + running distance since installation onto the selected route, showing your <b>current segment</b>, the <b>distance to the next landmark</b>, and your <b>overall completion percentage</b>.</p>
+        <p>No location access is needed, and the App doesn't need to stay open — data is collected automatically by the system health records and shown whenever you open StepJoy.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">切换线路会丢失进度吗？</span><span data-lang="en">Will I lose progress when switching routes?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>不会。每条线路的进度<b>独立保存</b>，切换后原线路的进度会完整保留；切换回来时可以继续走。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>No. Each route saves its progress <b>independently</b>. When you switch away and back, the original route's progress is fully preserved.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">StepJoy 会上传我的数据吗？</span><span data-lang="en">Does StepJoy upload my data?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>不会。StepJoy 是<b>单机应用</b>：无账号、无后端、无网络上报。健康数据仅在你的设备本机处理，绝不上传，也不会与任何第三方共享。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>No. StepJoy runs entirely <b>on-device</b>: no account, no backend, and no network transmission. Health data is processed only on your device — it is never uploaded or shared with any third party.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">支持哪些系统与设备？</span><span data-lang="en">What devices and systems are supported?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>支持 <b>iOS 17 及以上</b>的 iPhone。请确保系统「健康」App 正常开启并记录步数。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>StepJoy supports iPhones running <b>iOS 17 or later</b>. Please make sure the Health app is enabled and recording steps on your device.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">如何清除或重置我的数据？</span><span data-lang="en">How do I clear or reset my data?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>卸载 App，或在「设置 &gt; 通用 &gt; iPhone 储存空间」中删除 StepJoy 及其数据，即可清除全部本地进度。健康数据本身由系统「健康」App 管理，卸载 StepJoy 不会影响它。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>Uninstall the App, or delete StepJoy and its data under Settings &gt; General &gt; iPhone Storage, to erase all local progress. Your health data itself is managed by the Health app and is unaffected by uninstalling StepJoy.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">
+        <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <span data-lang="zh">会不会很耗电？</span><span data-lang="en">Does StepJoy drain my battery?</span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-lang="zh">
+        <p>基本不会。StepJoy <b>无后台常驻</b>、不使用定位；步数数据来自系统健康记录，仅在打开 App 时读取与展示。</p>
+      </div><div class="faq-a-inner" data-lang="en">
+        <p>Hardly. StepJoy has <b>no background processes</b> and does not use location; steps come from system health records and are only read and displayed while the App is open.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ===== 故障排查 ===== -->
+  <section class="section-block" id="troubleshoot">
+    <div class="sec-head">
+      <span class="sec-no">01</span>
+      <div>
+        <h2 data-lang="zh">故障排查</h2><h2 data-lang="en">Troubleshooting</h2>
+        <p class="sec-desc" data-lang="zh">按顺序尝试以下步骤，多数问题都可以自行解决。</p>
+        <p class="sec-desc" data-lang="en">Try the steps in order — most issues can be resolved on your own.</p>
+      </div>
+    </div>
+
+    <div class="ts-item">
+      <div class="ts-steps">
+        <div class="ts-title" data-lang="zh">授权后 App 内步数仍为 0</div>
+        <div class="ts-title" data-lang="en">Steps still show 0 after granting access</div>
+        <ol class="step-list">
+          <li data-lang="zh">打开系统「健康」App，确认「步数」下有今日数据</li>
+          <li data-lang="en">Open the Health app and confirm today's step count exists</li>
+          <li data-lang="zh">在「设置 &gt; 隐私与安全性 &gt; 健康 &gt; StepJoy」确认步数与距离开关已打开</li>
+          <li data-lang="en">In Settings &gt; Privacy &amp; Security &gt; Health &gt; StepJoy, make sure Step Count and Distance are both on</li>
+          <li data-lang="zh">完全退出并重新打开 StepJoy</li>
+          <li data-lang="en">Quit and reopen StepJoy</li>
+          <li data-lang="zh">若仍为 0，在「健康」App 的数据来源中确认 iPhone 计步正常</li>
+          <li data-lang="en">If it's still 0, check the Health app's data sources to confirm step counting works on your iPhone</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ts-item">
+      <div class="ts-steps">
+        <div class="ts-title" data-lang="zh">线路进度与预期不符</div>
+        <div class="ts-title" data-lang="en">Route progress doesn't look right</div>
+        <ol class="step-list">
+          <li data-lang="zh">确认顶部当前选中的线路，进度只累加到当前线路</li>
+          <li data-lang="en">Check which route is selected at the top — progress only accumulates on the current route</li>
+          <li data-lang="zh">确认数据起点：StepJoy 以安装 App 之后的运动数据计算</li>
+          <li data-lang="en">Confirm the starting point: StepJoy counts activity accumulated after the App was installed</li>
+          <li data-lang="zh">切换线路后，展示的是该线路自己的独立进度，属正常现象</li>
+          <li data-lang="en">After switching routes, you see that route's own independent progress — this is expected</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ts-item">
+      <div class="ts-steps">
+        <div class="ts-title" data-lang="zh">App 闪退或异常</div>
+        <div class="ts-title" data-lang="en">The App crashes or misbehaves</div>
+        <ol class="step-list">
+          <li data-lang="zh">在 App Store 更新到最新版本</li>
+          <li data-lang="en">Update to the latest version on the App Store</li>
+          <li data-lang="zh">重启 iPhone 后重试</li>
+          <li data-lang="en">Restart your iPhone and try again</li>
+          <li data-lang="zh">卸载重装（注意：会清除本地进度数据）</li>
+          <li data-lang="en">Uninstall and reinstall (note: this erases local progress)</li>
+          <li data-lang="zh">仍无法解决时，联系我们并提供截图与版本号</li>
+          <li data-lang="en">If it persists, contact us with a screenshot and the version number</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 联系技术支持 ===== -->
+  <section class="section-block" id="contact">
+    <div class="sec-head">
+      <span class="sec-no"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></span>
+      <div>
+        <h2 data-lang="zh">联系技术支持</h2><h2 data-lang="en">Contact Support</h2>
+        <p class="sec-desc" data-lang="zh">以上内容未能解决你的问题？欢迎通过以下方式与我们联系。</p>
+        <p class="sec-desc" data-lang="en">Didn't find a solution above? Reach out to us anytime.</p>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+          <span data-lang="zh">电子邮件</span><span data-lang="en">Email</span>
+        </div>
+        <div class="cc-body" data-lang="zh"><a href="mailto:hualy@foxmail.com">hualy@foxmail.com</a></div>
+        <div class="cc-body" data-lang="en"><a href="mailto:hualy@foxmail.com">hualy@foxmail.com</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a7 7 0 0 0-7 7c0 5 7 11 7 11s7-6 7-11a7 7 0 0 0-7-7z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <span data-lang="zh">反馈时请提供</span><span data-lang="en">Please include</span>
+        </div>
+        <ul data-lang="zh">
+          <li>设备型号与 iOS 版本</li>
+          <li>StepJoy 版本号</li>
+          <li>问题描述与截图（如有）</li>
+          <li>复现步骤（可选）</li>
+        </ul>
+        <ul data-lang="en">
+          <li>Device model and iOS version</li>
+          <li>StepJoy version number</li>
+          <li>Problem description and screenshots (if any)</li>
+          <li>Steps to reproduce (optional)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sec-note" data-lang="zh">提示：上线前请将上方邮箱替换为你的真实技术支持邮箱，并确保该邮箱可正常接收邮件。</p>
+    <p class="sec-note" data-lang="en">Note: replace the email above with your real support address before publishing, and make sure it can receive mail.</p>
+  </section>
+
+  <footer>
+    <span class="foot-line">© 2026 StepJoy</span>
+    <span class="foot-line">
+      <span data-lang="zh"><a href="../privacy-policy/index.html">隐私政策</a></span><span data-lang="en"><a href="../privacy-policy/index.html">Privacy Policy</a></span>
+    </span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var body = document.body;
+  var langBtn = document.getElementById('langToggle');
+  langBtn.addEventListener('click', function(){
+    var isEn = body.classList.toggle('en');
+    body.classList.toggle('zh', !isEn);
+    document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+    langBtn.textContent = isEn ? '中文' : 'EN';
+    document.title = isEn ? 'StepJoy Support' : 'StepJoy 技术支持';
+  });
+
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var open = q.getAttribute('aria-expanded') === 'true';
+      q.setAttribute('aria-expanded', String(!open));
+      a.style.maxHeight = open ? '0px' : a.scrollHeight + 'px';
+    });
+  });
+})();
+</script>
+</body>
+</html>
